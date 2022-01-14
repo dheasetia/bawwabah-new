@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminOfficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ Route::get('/', function () {
     return view('admin.dashboard');
 });
 
-Route::get('admin/offices', [\App\Http\Controllers\AdminOfficeController::class, 'index']);
+Route::get('admin/offices/{id}', [AdminOfficeController::class, 'show']);
+Route::get('admin/offices', [AdminOfficeController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

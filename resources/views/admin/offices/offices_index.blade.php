@@ -287,7 +287,7 @@
                                     <!--end::Avatar-->
                                     <!--begin::User details-->
                                     <div class="d-flex flex-column">
-                                        <a href="../../demo2/dist/apps/user-management/users/view.html" class="text-gray-800 text-hover-primary mb-1">{{$office->name}}</a>
+                                        <a href="{{url('admin/offices', $office->id)}}" class="text-gray-800 text-hover-primary mb-1">{{$office->name}}</a>
                                         <span>{{$office->email}}</span>
                                     </div>
                                     <!--begin::User details-->
