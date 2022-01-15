@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminOfficeController;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b4b6f60 (Add user resource)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +21,10 @@ Route::get('/', function () {
     return view('admin.dashboard');
 });
 
+<<<<<<< HEAD
 Route::get('admin/offices/{id}', [AdminOfficeController::class, 'show']);
+=======
+>>>>>>> b4b6f60 (Add user resource)
 Route::get('admin/offices', [AdminOfficeController::class, 'index']);
 
 Route::get('/dashboard', function () {
