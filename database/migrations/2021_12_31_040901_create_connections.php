@@ -69,9 +69,6 @@ class CreateConnections extends Migration
             $table->foreign('recipient_id')->references('id')->on('users');
             $table->foreign('sms_id')->references('id')->on('sms');
         });
-        Schema::table('reminders', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-        });
         Schema::table('report_pictures', function(Blueprint $table) {
             $table->foreign('report_id')->references('id')->on('reports');
         });
@@ -144,9 +141,6 @@ class CreateConnections extends Migration
         Schema::table('recipient_sms', function(Blueprint $table) {
             $table->dropForeign(['recipient_id']);
             $table->dropForeign(['sms_id']);
-        });
-        Schema::table('reminders', function(Blueprint $table) {
-            $table->dropForeign(['user_id']);
         });
         Schema::table('report_pictures', function(Blueprint $table) {
             $table->dropForeign(['report_id']);

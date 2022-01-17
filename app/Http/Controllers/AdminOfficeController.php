@@ -11,13 +11,13 @@ class AdminOfficeController extends Controller
     public function index() {
         $offices = Office::all();
 
-        return view('admin.offices.offices_index', compact('offices'));
+        return view('admin.offices.office_index', compact('offices'));
     }
 
     public function show($id)
     {
         $office = Office::findOrFail($id);
-        return $office;
+        return view('admin.offices.office_show', compact('office'));
     }
 
 }

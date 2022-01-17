@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('admin.dashboard');
 });
 
+Route::get('admin/offices/{id}', [AdminOfficeController::class, 'show']);
 Route::get('admin/offices', [AdminOfficeController::class, 'index']);
 
 Route::get('/dashboard', function () {
